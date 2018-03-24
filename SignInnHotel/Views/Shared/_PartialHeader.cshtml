@@ -1,0 +1,44 @@
+﻿
+ <!-- start header -->
+<header class="header_area">
+
+    <!-- start main header -->
+    <div class="main_header_area">
+        <div class="container">
+            <!-- start mainmenu & logo -->
+            <div class="mainmenu">
+                <div id="nav">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="site_logo fix">
+                                <a id="brand" class="clearfix navbar-brand border-right-whitesmoke" href=@Url.Action("Index","Home")><img src=@Url.Content("~/content/img/site-logo.png") alt="Trips"></a>
+                            </div>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href=@Url.Action("Index","Home")>Home</a></li>
+                                <li><a href=@Url.Action("AboutUs","Home")>About US</a></li>
+                                <li><a href=@Url.Action("Gallery","Home")>Gallery</a></li>
+                                <li><a href=@Url.Action("ContactUs","Home")>Contacts</a></li>
+                            </ul>
+                            <div class="emergency_number">
+                                <a href="tel:1234567890"><img src=@Url.Content("~/content/img/call-icon.png") alt="">+977 61 461496</a>
+                            </div>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+            </div>
+            <!-- end mainmenu and logo -->
+        </div>
+    </div>
+    <!-- end main header -->
+
+</header>
