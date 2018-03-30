@@ -125,7 +125,7 @@ a.btn.btn-black:hover{
   color: #fff;
 }
 .btn.btn-warning{
-  background: #fe5d5d none repeat scroll 0 0;
+  background: #015301 none repeat scroll 0 0;
   border: medium none;
   color: #fff;
   font-family: "Lora",serif;
@@ -133,12 +133,12 @@ a.btn.btn-black:hover{
   font-weight: 600;
   padding: 16px 27px;
   text-transform: uppercase;
-  border: 1px solid #fe5d5d;
+  border: 1px solid #015301;
 }
 .btn.btn-warning:hover{
-  color: #fe5d5d;
+  color: #015301;
   background: #fff;
-  border: 1px solid #fe5d5d;
+  border: 1px solid #015301;
 }
 .btn.btn-info{
   background: #e0e0e0;
