@@ -384,8 +384,10 @@
     <Content Include="Content\js\grid.js" />
     <Content Include="Content\js\jquery.easing.1.3.min.js" />
     <Content Include="Content\js\jquery.scrollUp.min.js" />
+    <Content Include="Content\js\jquery.validate.min.js" />
     <Content Include="Content\js\lightslider.js" />
     <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\Myscript.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
     <Content Include="Content\js\rev-slider\rs-plugin\jquery.themepunch.plugins.min.js" />
     <Content Include="Content\js\rev-slider\rs-plugin\jquery.themepunch.revolution.js" />
@@ -421,7 +423,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WhitespaceFilterAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MailCtrlController.cs" />
+    <Compile Include="Controllers\RoomBookingFormModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -446,8 +448,8 @@
     <Content Include="Views\Home\RoomeDetails.cshtml" />
     <Content Include="Views\Shared\_LayoutGallery.cshtml" />
     <Content Include="Views\Shared\_LayoutRoomeDetails.cshtml" />
-    <Content Include="Views\MailCtrl\Index.cshtml" />
-    <Content Include="Views\MailCtrl\Index2.cshtml" />
+    <Content Include="Views\Shared\_PartialHomeBookingForm.cshtml" />
+    <Content Include="Views\Shared\_PartialRoomeDetailsBookingForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

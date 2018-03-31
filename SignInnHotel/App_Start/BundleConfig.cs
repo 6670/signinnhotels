@@ -20,6 +20,7 @@ namespace SignInnHotel.App_Start
                 //use Include() method to add all the script files with their paths 
                 scriptJs.Include(
                                     "~/content/js/vendor/jquery-1.11.2.min.js",
+                                    "~/content/js/jquery.validate.min.js",                       
                                     "~/content/js/bootstrap.min.js",
                                     "~/content/js/rev-slider/rs-plugin/jquery.themepunch.plugins.min.js",
                                     "~/content/js/rev-slider/rs-plugin/jquery.themepunch.revolution.js",
@@ -30,7 +31,8 @@ namespace SignInnHotel.App_Start
                                     "~/content/js/jquery.scrollUp.min.js",
                                     "~/content/js/owl.carousel.min.js",
                                     "~/content/js/lightslider.js",
-                                    "~/content/js/wow.min.js"
+                                    "~/content/js/wow.min.js",
+                                    "~/content/js/myscript.js"
                                   );
 
                 //styleCss.Include(

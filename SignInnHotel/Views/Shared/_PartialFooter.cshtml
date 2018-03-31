@@ -18,8 +18,8 @@
                                 <li><a href=@Url.Action("Index","Home")>About Us</a></li>
                                 <li><a href=@Url.Action("ContactUs","Home")>Contact Us</a></li>
                                 <li><a href="@Url.Action("Gellary","Home")">Rooms</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy policy</a></li>
+                                @*<li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy policy</a></li>*@
                             </ul>
                             @*<div class="col-lg-6 col-md-6 sol-sm-6">
                                 <ul>
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="container">
                     <div class="footer_copyright margin-tb-50 content-center">
-                        <p>© 2018 <a href="#">Sign Inn Hotel</a>. All rights reserved</p>
+                        <p>© @DateTime.Now.Year <a href="#">Sign Inn Hotel</a>. All rights reserved</p>
                     </div>
                 </div>
             </div>

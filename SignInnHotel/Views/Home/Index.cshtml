@@ -4,66 +4,14 @@
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
- <!-- start main slider -->
+<!-- start main slider -->
 <div class="main_slider_area">
     <div class="main_slider" id="slider_rev">
         <!-- start hotel booking -->
         <div class="hotel_booking_area">
             <div class="container">
                 <div class="hotel_booking">
-                    <form id="form1" role="form" action="#" class="">
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <div class="room_book border-right-dark-1">
-                                <h6>Book Your</h6>
-                                <p>Rooms</p>
-                            </div>
-                        </div>
-                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
-                            <input placeholder="Your Email Id *" required="" name="email" type="text" class="email_input">
-                        </div>
-                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
-                            <div class="input-group border-bottom-dark-2">
-                                <input class="date-picker" id="datepicker" placeholder="Arrival" type="text" />
-                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                            </div>
-                        </div>
-                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
-                            <div class="input-group border-bottom-dark-2">
-                                <input class="date-picker" id="datepicker1" placeholder="Departure" type="text" />
-                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="row">
-                                <div class="form-group col-lg-4 col-md-4 col-sm-4 icon_arrow">
-                                    <div class="input-group border-bottom-dark-2">
-                                        <select class="form-control" name="room" id="room">
-                                            <option selected="selected" disabled="disabled">1 Room</option>
-                                            <option value="Single">1 Room</option>
-                                            <option value="Double">2 Room</option>
-                                            <option value="Deluxe">3 Room</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group col-lg-4 col-md-4 col-sm-4 icon_arrow">
-                                    <div class="input-group border-bottom-dark-2">
-                                        <select class="form-control" name="room" id="room">
-                                            <option selected="selected" disabled="disabled">No. of Guests</option>
-                                            <option value="Single">1</option>
-                                            <option value="Double">2</option>
-                                            <option value="Deluxe">3</option>
-                                            <option value="Deluxe">4</option>
-                                            <option value="Deluxe">5</option>
-                                            <option value="Deluxe">5+</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                    <a class="btn btn-primary floatright">Book</a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                 @Html.Partial("_PartialHomeBookingForm")
                     <!-- special offer start -->
                     <div class="special_offer_main">
                         <img src=@Url.Content("~/content/img/special-offer-main.png") alt="">
@@ -89,7 +37,7 @@
                         </div>
                         <div class="tp-caption lfb carousel-caption-inner" data-x="105" data-y="313" data-speed="1300" data-start="1700" data-easing="easeInOutBack"
                              style="background: #f7c411; padding: 10px; cursor: pointer;">
-                            <a href="#" class="" style="background: #f7c411; border-radius: 0; color: #000; display: inline-block;  font-size: 18px; padding: 8px 34px; text-transform: uppercase; border: 1px solid #9e811a;">Book Now</a>
+                            <a href=@Url.Action("gallery","Home") class="" style="background: #f7c411; border-radius: 0; color: #000; display: inline-block;  font-size: 18px; padding: 8px 34px; text-transform: uppercase; border: 1px solid #9e811a;">Book Now</a>
                         </div>
                     </li>
 
@@ -145,7 +93,7 @@
                                     <h5>Classic Double, Triple Rooms</h5>
                                     <p>
                                         A 15 sqm room featuring a walk in shower, 18 inch TV, multi channel satellite television, high
-                                        speed internet access. 
+                                        speed internet access.
 
                                     </p>
                                     <p></p>
@@ -277,192 +225,192 @@
 <!-- end welcome section -->
 <!-- start Hotel Facilities section -->
 @*<section class="hotel_facilities_area margin-top-115 margin-bottom-100">
-    <div class="container">
-        <div class="hotel_facilities">
-            <div class="section_title nice_title content-center">
-                <h3 style="color: #f7c42b;">Hotel Facilities</h3>
-            </div>
-            <div class="hotel_facilities_content">
-                <div role="tabpanel">
+        <div class="container">
+            <div class="hotel_facilities">
+                <div class="section_title nice_title content-center">
+                    <h3 style="color: #f7c42b;">Hotel Facilities</h3>
+                </div>
+                <div class="hotel_facilities_content">
+                    <div role="tabpanel">
 
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
-                            <a href="#restaurant" aria-controls="restaurant" role="tab" data-toggle="tab">
-                                <img src=@Url.Content("~/content/img/home-facilities-icon-eleven.png") alt="restaurant">
-                                <span>restaurant</span>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#sports-club" aria-controls="sports-club" role="tab" data-toggle="tab">
-                                <img src=@Url.Content("~/content/img/home-facilities-icon-seven.png") alt="sports-club">
-                                <span>sports-club</span>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#pick-up" aria-controls="pick-up" role="tab" data-toggle="tab">
-                                <img src=@Url.Content("~/content/img/home-facilities-icon-eight.png") alt="pick-up">
-                                <span>pick-up</span>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#bar" aria-controls="bar" role="tab" data-toggle="tab">
-                                <img src=@Url.Content("~/content/img/home-facilities-icon-nine.png") alt="bar"><span>bar</span>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#gym" aria-controls="gym" role="tab" data-toggle="tab">
-                                <img src=@Url.Content("~/content/img/home-facilities-icon-ten.png") alt="gym"><span>gym</span>
-                            </a>
-                        </li>
-                    </ul>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#restaurant" aria-controls="restaurant" role="tab" data-toggle="tab">
+                                    <img src=@Url.Content("~/content/img/home-facilities-icon-eleven.png") alt="restaurant">
+                                    <span>restaurant</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#sports-club" aria-controls="sports-club" role="tab" data-toggle="tab">
+                                    <img src=@Url.Content("~/content/img/home-facilities-icon-seven.png") alt="sports-club">
+                                    <span>sports-club</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#pick-up" aria-controls="pick-up" role="tab" data-toggle="tab">
+                                    <img src=@Url.Content("~/content/img/home-facilities-icon-eight.png") alt="pick-up">
+                                    <span>pick-up</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#bar" aria-controls="bar" role="tab" data-toggle="tab">
+                                    <img src=@Url.Content("~/content/img/home-facilities-icon-nine.png") alt="bar"><span>bar</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#gym" aria-controls="gym" role="tab" data-toggle="tab">
+                                    <img src=@Url.Content("~/content/img/home-facilities-icon-ten.png") alt="gym"><span>gym</span>
+                                </a>
+                            </li>
+                        </ul>
 
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="restaurant">
-                            <div class="single-tab-content">
-                                <div class="row">
-                                    <div class="co-lg-5 col-md-5 col-sm-6">
-                                        <div class="single-tab-image">
-                                            <a href="#"><img src=@Url.Content("~/content/img/hotel-facility-one.jpg") alt=""></a>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="restaurant">
+                                <div class="single-tab-content">
+                                    <div class="row">
+                                        <div class="co-lg-5 col-md-5 col-sm-6">
+                                            <div class="single-tab-image">
+                                                <a href="#"><img src=@Url.Content("~/content/img/hotel-facility-one.jpg") alt=""></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="co-lg-7 col-md-7 col-sm-6">
-                                        <div class="single-tab-details">
-                                            <h6>The world class</h6>
-                                            <h3>Restaurant & Banquets</h3>
-                                            <p>
-                                                Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
-                                            </p>
-                                            <p>
-                                                Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
-                                            </p>
-                                            <div class="our_services">
-                                                <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
-                                                <a href="#">service charge : &#8377;15</a>
+                                        <div class="co-lg-7 col-md-7 col-sm-6">
+                                            <div class="single-tab-details">
+                                                <h6>The world class</h6>
+                                                <h3>Restaurant & Banquets</h3>
+                                                <p>
+                                                    Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
+                                                </p>
+                                                <p>
+                                                    Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
+                                                </p>
+                                                <div class="our_services">
+                                                    <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
+                                                    <a href="#">service charge : &#8377;15</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="sports-club">
-                            <div class="single-tab-content">
-                                <div class="row">
-                                    <div class="co-lg-5 col-md-5">
-                                        <div class="single-tab-image">
-                                            <a href="#"><img src=@Url.Content("~/content/img/sports_club.jpg") alt=""></a>
+                            <div role="tabpanel" class="tab-pane" id="sports-club">
+                                <div class="single-tab-content">
+                                    <div class="row">
+                                        <div class="co-lg-5 col-md-5">
+                                            <div class="single-tab-image">
+                                                <a href="#"><img src=@Url.Content("~/content/img/sports_club.jpg") alt=""></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="co-lg-7 col-md-7">
-                                        <div class="single-tab-details">
-                                            <h6>The world class</h6>
-                                            <h3>Sports Club</h3>
-                                            <p>
-                                                Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
-                                            </p>
-                                            <p>
-                                                Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
-                                            </p>
-                                            <div class="our_services">
-                                                <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
-                                                <a href="#">service charge : &#8377;15</a>
+                                        <div class="co-lg-7 col-md-7">
+                                            <div class="single-tab-details">
+                                                <h6>The world class</h6>
+                                                <h3>Sports Club</h3>
+                                                <p>
+                                                    Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
+                                                </p>
+                                                <p>
+                                                    Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
+                                                </p>
+                                                <div class="our_services">
+                                                    <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
+                                                    <a href="#">service charge : &#8377;15</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="pick-up">
-                            <div class="single-tab-content">
-                                <div class="row">
-                                    <div class="co-lg-5 col-md-5">
-                                        <div class="single-tab-image">
-                                            <a href="#"><img src=@Url.Content("~/content/img/car_park.jpg") alt=""></a>
+                            <div role="tabpanel" class="tab-pane" id="pick-up">
+                                <div class="single-tab-content">
+                                    <div class="row">
+                                        <div class="co-lg-5 col-md-5">
+                                            <div class="single-tab-image">
+                                                <a href="#"><img src=@Url.Content("~/content/img/car_park.jpg") alt=""></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="co-lg-7 col-md-7">
-                                        <div class="single-tab-details">
-                                            <h6>The world class</h6>
-                                            <h3>Pick Up</h3>
-                                            <p>
-                                                Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
-                                            </p>
-                                            <p>
-                                                Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
-                                            </p>
-                                            <div class="our_services">
-                                                <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
-                                                <a href="#">service charge : &#8377;15</a>
+                                        <div class="co-lg-7 col-md-7">
+                                            <div class="single-tab-details">
+                                                <h6>The world class</h6>
+                                                <h3>Pick Up</h3>
+                                                <p>
+                                                    Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
+                                                </p>
+                                                <p>
+                                                    Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
+                                                </p>
+                                                <div class="our_services">
+                                                    <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
+                                                    <a href="#">service charge : &#8377;15</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="bar">
-                            <div class="single-tab-content">
-                                <div class="row">
-                                    <div class="co-lg-5 col-md-5">
-                                        <div class="single-tab-image">
-                                            <a href="#"><img src=@Url.Content("~/content/img/coyote-bar.jpg") alt=""></a>
+                            <div role="tabpanel" class="tab-pane" id="bar">
+                                <div class="single-tab-content">
+                                    <div class="row">
+                                        <div class="co-lg-5 col-md-5">
+                                            <div class="single-tab-image">
+                                                <a href="#"><img src=@Url.Content("~/content/img/coyote-bar.jpg") alt=""></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="co-lg-7 col-md-7">
-                                        <div class="single-tab-details">
-                                            <h6>The world class</h6>
-                                            <h3>Bar</h3>
-                                            <p>
-                                                Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
-                                            </p>
-                                            <p>
-                                                Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
-                                            </p>
-                                            <div class="our_services">
-                                                <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
-                                                <a href="#">service charge : &#8377;15</a>
+                                        <div class="co-lg-7 col-md-7">
+                                            <div class="single-tab-details">
+                                                <h6>The world class</h6>
+                                                <h3>Bar</h3>
+                                                <p>
+                                                    Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
+                                                </p>
+                                                <p>
+                                                    Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
+                                                </p>
+                                                <div class="our_services">
+                                                    <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
+                                                    <a href="#">service charge : &#8377;15</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="gym">
-                            <div class="single-tab-content">
-                                <div class="row">
-                                    <div class="co-lg-5 col-md-5">
-                                        <div class="single-tab-image">
-                                            <a href="#"><img src=@Url.Content("~/content/img/gym.jpg") alt=""></a>
+                            <div role="tabpanel" class="tab-pane" id="gym">
+                                <div class="single-tab-content">
+                                    <div class="row">
+                                        <div class="co-lg-5 col-md-5">
+                                            <div class="single-tab-image">
+                                                <a href="#"><img src=@Url.Content("~/content/img/gym.jpg") alt=""></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="co-lg-7 col-md-7">
-                                        <div class="single-tab-details">
-                                            <h6>The world class</h6>
-                                            <h3>Gym</h3>
-                                            <p>
-                                                Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
-                                            </p>
-                                            <p>
-                                                Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
-                                            </p>
-                                            <div class="our_services">
-                                                <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
-                                                <a href="#">service charge : &#8377;15</a>
+                                        <div class="co-lg-7 col-md-7">
+                                            <div class="single-tab-details">
+                                                <h6>The world class</h6>
+                                                <h3>Gym</h3>
+                                                <p>
+                                                    Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.
+                                                </p>
+                                                <p>
+                                                    Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
+                                                </p>
+                                                <div class="our_services">
+                                                    <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
+                                                    <a href="#">service charge : &#8377;15</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
-</section>*@
+    </section>*@
 <!-- end Hotel Facilities section -->
 <!-- start About Us section -->
 <section class="about_us_area m-t-90">
@@ -484,10 +432,10 @@
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-8 padding-left-0">
                                         <div class="post_title clearfix">
-                                            <h6>Quisque at felis port titordga</h6>
+                                            <h6>1st Jan celebrate</h6>
                                         </div>
                                         <div class="post_content  margin-bottom-35">
-                                            <p>14 May 2014</p>
+                                            <p>1 Jan 2018</p>
                                         </div>
                                     </div>
                                 </div>
@@ -499,10 +447,10 @@
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-8 padding-left-0">
                                         <div class="post_title clearfix">
-                                            <h6>Donec scelerisque vulputate</h6>
+                                            <h6>First Day First Out</h6>
                                         </div>
                                         <div class="post_content margin-bottom-35">
-                                            <p>15 May 2014</p>
+                                            <p>10 Jan 2018</p>
                                         </div>
                                     </div>
                                 </div>
@@ -514,10 +462,10 @@
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-8 padding-left-0">
                                         <div class="post_title clearfix">
-                                            <h6>Curabitur varius quam lorem</h6>
+                                            <h6>Customer Feedback</h6>
                                         </div>
                                         <div class="post_content">
-                                            <p>17 May 2014</p>
+                                            <p>31 Jan 2018</p>
                                         </div>
                                     </div>
                                 </div>
@@ -576,19 +524,16 @@
                                     <div class="single_says">
                                         <div class="customer_comment">
                                             <p>
-                                                Semper ac dolor vitae msan. Cras interdum hendreritnia Phasellus accumsan urna vitae molestie interdum.
-                                            </p>
-                                            <p>
-                                                Nam sed placerat libero, non eleifend dolor.
+                                                Goof location, clean, good food, good service, good atmosphere and good value. Recommended
                                             </p>
                                         </div>
                                         <div class="customer_detail clearfix">
                                             @*<div class="customer_pic alignleft-20">
-                                                <a href="#"><img src=@Url.Content("~/content/img/customer-says-one.png") alt=""></a>
-                                            </div>*@
+                                                    <a href="#"><img src=@Url.Content("~/content/img/customer-says-one.png") alt=""></a>
+                                                </div>*@
                                             <div class="customer_identity floatleft">
-                                                <h6>John Doe</h6>
-                                                <p>www.john.com</p>
+                                                <h6>Finc Hock</h6>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -597,19 +542,16 @@
                                     <div class="single_says">
                                         <div class="customer_comment">
                                             <p>
-                                                Semper ac dolor vitae msan. Cras interdum hendreritnia Phasellus accumsan urna vitae molestie interdum.
-                                            </p>
-                                            <p>
-                                                Nam sed placerat libero, non eleifend dolor.
+                                                My second time in this hotel. Was a bit afraid it would not live up to my memories but, it did. I especially love the pianist at breakfast; what a relaxing way to start the day.
                                             </p>
                                         </div>
                                         <div class="customer_detail clearfix">
                                             @*<div class="customer_pic alignleft-20">
-                                                <a href="#"><img src=@Url.Content("~/content/img/customer-says-one.png") alt=""></a>
-                                            </div>*@
+                                                    <a href="#"><img src=@Url.Content("~/content/img/customer-says-one.png") alt=""></a>
+                                                </div>*@
                                             <div class="customer_identity floatleft">
-                                                <h6>John Doe</h6>
-                                                <p>www.john.com</p>
+                                                <h6>Tinit Pauo</h6>
+                                              
                                             </div>
                                         </div>
                                     </div>
@@ -632,4 +574,3 @@
     </div>
 </section>
 <!-- end About Us section -->
-
