@@ -408,6 +408,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Properties\PublishProfiles\signinn.pubxml" />
+    <None Include="Properties\PublishProfiles\tedt.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -420,6 +421,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WhitespaceFilterAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailCtrlController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -444,6 +446,8 @@
     <Content Include="Views\Home\RoomeDetails.cshtml" />
     <Content Include="Views\Shared\_LayoutGallery.cshtml" />
     <Content Include="Views\Shared\_LayoutRoomeDetails.cshtml" />
+    <Content Include="Views\MailCtrl\Index.cshtml" />
+    <Content Include="Views\MailCtrl\Index2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
