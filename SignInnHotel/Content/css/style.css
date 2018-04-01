@@ -510,7 +510,7 @@ body#home_two .select_room .room_rent > p > span, body#accomodation_page .select
   border: medium none;
   margin: 0 auto;
   text-align: center;
-  width: 56.7%;
+  /*width: 56.7%;*/
 }
 .hotel_facilities_content .nav-tabs > li > a {
 	background: #eeefed none repeat scroll 0 0;
@@ -1889,7 +1889,7 @@ body#single_blog_page .recent_post_details > p {
     border: medium none;
     color: #aab8ca;
     outline: none;
-	border-bottom: solid 2px #475362;
+	border-bottom: solid 1px #475362;
 }
 .floatLeft li{
 	float:left;

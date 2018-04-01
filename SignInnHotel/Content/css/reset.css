@@ -308,7 +308,7 @@ ul.clearul > li{
     border-right: solid 1px #475362;
 }
 .border-bottom-dark-2{
-    border-bottom: solid 2px #475362;
+    border-bottom: solid 1px #475362;
 }
 .border-bottom-yellow{
   border-bottom: solid 1px #e8d661;
@@ -951,9 +951,22 @@ h6{
   end revolution slider arrow styles
 ---------------------------------------*/
 
+.single_facilities_name > li > p {
+    color: #313a45;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
 
-
-
+.single_facilities_name > li > img {
+    float: left;
+    margin-right: 8px;
+}
+.single_facilities_name > li:first-child {
+    margin-bottom: 30px;
+}
 /* ------------------------------------
          start responsive styles
 ---------------------------------------*/
