@@ -44,29 +44,30 @@
                         <div class="section_title margin-bottom-40">
                             <h4><b>send us an email</b></h4>
                         </div>
-                        <form action="contact/home" method="post">
+                        @using(Html.BeginForm("contactus","home",FormMethod.Post,new { id = "contactus" })) { 
+                       
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
-                                    <input type="text" placeholder="First Name *" name="fname" required>
+                                    <input type="text" placeholder="First Name *" data-validation="required" name="fname" required>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <input type="text" placeholder="Last Name *" required name="lname">
+                                    <input type="text" placeholder="Last Name *" data-validation="required" required name="lname">
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <input type="text" placeholder="Your Email Id *" required name="email" />
+                                    <input type="text" placeholder="Your Email Id *" data-validation="email" required name="email" />
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <input type="text" placeholder="Phone Number *" required name="phone" />
+                                    <input type="text" placeholder="Phone Number *" data-validation="ukphone" required name="phone" />
                                 </div>
                                 <div class="col-lg-12 col-md-12">
-                                    <textarea name="message" placeholder="Message" required></textarea>
+                                    <textarea name="message" data-validation="required" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-lg-4 col-md-4">
                                     <!-- <a href="#" class="btn btn-warning btn-md"></a> -->
                                     <input class="btn btn-warning btn-md" type="submit" name="submit" value="Submit Now" />
                                 </div>
                             </div>
-                        </form>
+                        }
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
