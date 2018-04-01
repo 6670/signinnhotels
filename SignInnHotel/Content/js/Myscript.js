@@ -135,7 +135,8 @@
     };
 
     window.applyValidation(true, '#completeForm', 'false', false, false, submitForm);
-  
+    window.applyValidation(true, '#contactus', 'false', false, false, submitForm);
+    
     function submitForm($form) {
         $('#' + $form + ' :submit')[0].setAttribute("disabled", "disabled");
         $('#' + $form + ' :submit')[0].value = 'Please wait...';

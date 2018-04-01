@@ -1,4 +1,5 @@
 ﻿using SignInnHotel.App_Start;
+using SignInnHotel.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,58 @@ namespace SignInnHotel.Controllers
          
             }
             return View();
+        }
+        [HttpPost]
+        public ActionResult ContactUs(ContatusModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                MailMessage mail = new MailMessage("noreply@signinnhotels.com", "debudeveloper6670@gmail.com");
+                SmtpClient client = new SmtpClient("mail.signinnhotels.com", 25);
+                // client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new System.Net.NetworkCredential("noreply@signinnhotels.com", "Noreply@123");
+                mail.Subject = "Book My Hotel";
+                mail.Body = CraeteConactUsMailBody(model);
+                try
+                {
+                    client.Send(mail);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            return View();
+
+        }
+
+        private string CraeteConactUsMailBody(ContatusModel model)
+        {
+            string strEmailBody = "";
+            strEmailBody += "Inquery Time: ";
+            strEmailBody += DateTime.Now.ToString();
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+
+            strEmailBody += "Full Name: ";
+            strEmailBody += model.FName+ " "+model.LName;
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+
+            strEmailBody += "Your Email: ";
+            strEmailBody += model.Email;
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+
+            strEmailBody += "Your Phone: ";
+            strEmailBody += model.Phone;
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+
+            strEmailBody += "Message: ";
+            strEmailBody += model.Message;
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+            strEmailBody = strEmailBody + Environment.NewLine + Environment.NewLine;
+
+            return strEmailBody;
         }
 
         private void sendConfirmtoCustomer(RoomBookingFormModel model)
